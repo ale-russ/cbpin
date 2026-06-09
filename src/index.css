@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  
+  /* Immersive UI Absolute Black & Carbon Palette */
+  --color-slate-950: #050505;
+  --color-slate-900: #0a0a0a;
+  --color-slate-850: #0f0f0f;
+  --color-slate-800: #1a1a1a;
+  --color-slate-700: #262626;
+  --color-slate-600: #404040;
+  --color-slate-500: #666666;
+  --color-slate-400: #888888;
+  --color-slate-300: #b3b3b3;
+  --color-slate-200: #d4d4d4;
+  --color-slate-100: #e0e0e0;
+  --color-slate-150: #ffffff;
+  
+  /* Brand Orange Accent overrides targeting Emerald style hooks */
+  --color-emerald-500: #FF6321;
+  --color-emerald-400: #ff7b42;
+  --color-emerald-300: #FF9E00;
+  --color-emerald-250: #ffa64d;
+  --color-emerald-200: #ffbf80;
+  --color-emerald-950: #140d08;
+  --color-emerald-900: #1a130a;
+  --color-emerald-800: #302010;
+  
+  /* Bright Glowing Green Core Indicators */
+  --color-green-glowing: #00FF00;
+}
+
+/* Custom glowing effects, animations and scrollbars matching the Immersive terminal look */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+.glow-orange-text {
+  text-shadow: 0 0 10px rgba(255, 99, 33, 0.4);
+}
+
+.animate-pulse-slow {
+  animation: pulse-glowing 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glowing {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
+
+/* Custom sleek high-contrast scrollbars to prevent gray defaults in immersive view */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6321;
+}
+
+/* Make body fit exactly and use selection colors */
+body {
+  background-color: #050505;
+  color: #e0e0e0;
+}
+
+/* Custom premium dropdown select & custom option styling for CPIN unified theme */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%23FF6321' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px;
+  padding-right: 32px !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+select:focus {
+  border-color: #FF6321 !important;
+  box-shadow: 0 0 10px rgba(255, 99, 33, 0.15) !important;
+}
+
+select option {
+  background-color: #0a0a0a !important;
+  color: #e0e0e0 !important;
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace !important;
+  padding: 8px !important;
+}
+

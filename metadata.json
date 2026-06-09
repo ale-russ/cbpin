@@ -1,0 +1,6 @@
+{
+  "name": "Cross-Border Procurement Intelligence Network",
+  "description": "Interactive terminal, AI opportunity engine, supplier networks, and strategic blueprint for East African procurement intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
